@@ -1,55 +1,50 @@
-/*function code(){
-
-let inputcode = document.getElementById('xvar').value;
-console.log(inputcode);
-
-let codeString = inputcode;
-var symbols = codeString.split("");
-console.log(symbols);
-
-let arricao = [Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-let filteralph = arricao.filter(code => {
-    arricao[0] === symbols[0];
-  });
-  console.log(filteralph);
-
-}
 
 
 
-/*
-//arralphNumb = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-arricao = [Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-let filteralph = arricao.filter(code => {
-    arricao[0] === document.getElementById('xvar').value;
-  });
-  console.log(filteralph);
+const vocab = {
+
+  'A': 'Alpha',  'B': 'Bravo',   'C': 'Charlie',
+  'D': 'Delta',  'E': 'Echo',    'F': 'Foxtrot',
+  'G': 'Golf',   'H': 'Hotel',   'I': 'India',
+  'J': 'Juliett','K': 'Kilo',    'L': 'Lima',
+  'M': 'Mike',   'N': 'November','O': 'Oscar',
+  'P': 'Papa',   'Q': 'Quebec',  'R': 'Romeo',
+  'S': 'Sierra', 'T': 'Tango',   'U': 'Uniform',
+  'V': 'Victor', 'W': 'Whiskey', 'X': 'X-ray',
+  'Y': 'Yankee', 'Z': 'Zulu', '1': 'One', '2':'Two',
+  '3':'Three', '4': 'Four', '5':'Five', '6': 'Six',
+  '7':'Seven', '8':'Eight', '9':'Nine', '0':'Zero'
+};
+function code(){
   
-  filteredList;
+let inputcode = document.getElementById('xvar').value.toUpperCase().split("");
 
-/*A : Alfa
-B : Bravo
-C - Charlie
-D - Delta
-E - Echo
-F - Foxtrot
-G - Golf
-H - Hotel
-I - India
-J - Juliett
-K - Kilo
-L - Lima
-M - Mike
-N - November
-O - Oscar
-P - Papa
-Q - Quebec
-R - Romeo
-S - Sierra
-T - Tango
-U - Uniform
-V - Victor
-W - Whiskey
-X - X-ray
-Y - Yankee
-Z - Zulu​ */
+
+let result = inputcode.map(item => vocab[inputcode [item]])  
+              .filter( (item) => typeof item !== 'undefined').join(' ');
+              return;
+
+console.log(result);
+
+}       
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+/*//Array.from([1, 2, 3], x => x + x));
+//Array.from( inputcode, x => x + x));
+//console.log( alphabet[icode[0]]);
+
+//alphabet[inputcode[1]],  alphabet[inputcode[2]],  alphabet[inputcode[3]],  alphabet[inputcode[4]],  alphabet[inputcode[5]],  alphabet[inputcode[6]]);
+}
+*/
