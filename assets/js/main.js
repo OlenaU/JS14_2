@@ -1,6 +1,4 @@
 
-
-
 const vocab = {
 
   'A': 'Alpha',  'B': 'Bravo',   'C': 'Charlie',
@@ -17,14 +15,11 @@ const vocab = {
 };
 function code(){
   
-let inputcode = document.getElementById('xvar').value.toUpperCase().split("");
+let inputcode = document.getElementById('xvar').value.toUpperCase().split("")
 
-
-let result = inputcode.map(item => vocab[inputcode [item]])  
-              .filter( (item) => typeof item !== 'undefined').join(' ');
-              return;
-
-console.log(result);
+let convert = inputcode.map(item => vocab[item]).join(' ')
+                
+alert(`${convert}`);
 
 }       
 
@@ -41,10 +36,9 @@ console.log(result);
 
 
 
-/*//Array.from([1, 2, 3], x => x + x));
+//Array.from([1, 2, 3], x => x + x));
 //Array.from( inputcode, x => x + x));
 //console.log( alphabet[icode[0]]);
 
 //alphabet[inputcode[1]],  alphabet[inputcode[2]],  alphabet[inputcode[3]],  alphabet[inputcode[4]],  alphabet[inputcode[5]],  alphabet[inputcode[6]]);
-}
-*/
+
