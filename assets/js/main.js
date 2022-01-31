@@ -17,7 +17,7 @@ function code(){
   
 let inputcode = document.getElementById('xvar').value.toUpperCase().split("")
 
-let convert = inputcode.map(item => vocab[item]).join(' ')
+let convert = inputcode.map(item => vocab[item]) .filter( (item)=> typeof item !== 'undefined').join(' ')
                 
 alert(`${convert}`);
 
